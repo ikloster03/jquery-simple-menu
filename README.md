@@ -14,6 +14,8 @@ $('.simple-menu').simpleMenu({
 ```
 npm install jquery-simple-menu
 ```
+## TODO
+- [ ] noframework version
 
 ## License
 
