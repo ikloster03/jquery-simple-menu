@@ -1,0 +1,25 @@
+{
+  "name": "simple-menu",
+  "version": "0.1.0",
+  "description": "Quickly building a menu of the site",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikloster03/jquery-simple-menu.git"
+  },
+  "homepage": "https://github.com/ikloster03/jquery-simple-menu#readme",
+  "keywords": [
+    "menu"
+  ],
+  "author": {
+    "name": "Ivan Monastyrev",
+    "email": "ikloster@yandex.ru"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "waypoints": "^4.0.1"
+  }
+}
