@@ -9,7 +9,7 @@ $('.simple-menu').simpleMenu({
 })
 ```
 
-##Install
+## Install
 
 ```
 npm install jquery-simple-menu
