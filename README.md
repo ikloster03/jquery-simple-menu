@@ -1,4 +1,4 @@
-# JQuery Simple Menu Plugin 
+# JQuery Simple Menu Plugin
 
 Simple Menu Plugin is a utility for quickly building a menu of the site
 
@@ -7,6 +7,12 @@ $('.simple-menu').simpleMenu({
   stickyMenu: true,
   slidingLine: true
 })
+```
+
+##Install
+
+```
+npm install jquery-simple-menu
 ```
 
 ## License
