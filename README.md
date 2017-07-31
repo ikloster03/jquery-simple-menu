@@ -14,7 +14,11 @@ $('.simple-menu').simpleMenu({
 ```
 npm install jquery-simple-menu
 ```
+## Examples
+
+[jquery-simple-menu example](https://ikloster03.github.io/jquery-simple-menu/)
 ## TODO
+
 - [ ] noframework version
 
 ## License
