@@ -9,7 +9,7 @@ $('.simple-menu').simpleMenu({
 })
 ```
 
-> slidingLine is implemented using waypoints
+> slidingLine is implemented using [waypoints](https://github.com/imakewebthings/waypoints)
 
 
 ## Install
