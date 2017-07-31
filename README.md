@@ -9,6 +9,9 @@ $('.simple-menu').simpleMenu({
 })
 ```
 
+> slidingLine is implemented using waypoints
+
+
 ## Install
 
 ```
@@ -17,9 +20,11 @@ npm install jquery-simple-menu
 ## Examples
 
 [jquery-simple-menu example](https://ikloster03.github.io/jquery-simple-menu/)
+
 ## TODO
 
-- [ ] noframework version
+- [ ] no waypoints version
+- [ ] no framework version
 
 ## License
 
