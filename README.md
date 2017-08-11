@@ -47,6 +47,8 @@ waypointTrackedClassName | string | 'tracked' | css class of the waypoint tracke
 ## Browser Support
 
 
+## Framework Support
+
 
 ## Dependencies
 
@@ -55,6 +57,10 @@ waypointTrackedClassName | string | 'tracked' | css class of the waypoint tracke
 
 ## TODO
 
+- [ ] with gulp
+- [ ] with bower
+- [ ] add Browser Support
+- [ ] add Framework Support
 - [ ] no waypoints version
 - [ ] no framework version
 
