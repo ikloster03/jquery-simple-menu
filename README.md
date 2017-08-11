@@ -20,7 +20,8 @@ npm install jquery-simple-menu
 
 
 ## Examples
-![Alt Text](https://github.com/ikloster03/jquery-simple-menu/tree/master/images/example.gif)
+![Alt Text](https://github.com/ikloster03/jquery-simple-menu/raw/master/images/example.gif)
+
 
 [jquery-simple-menu example](https://ikloster03.github.io/jquery-simple-menu/)
 
