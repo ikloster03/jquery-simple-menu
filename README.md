@@ -46,7 +46,6 @@ waypointTrackedClassName | string | 'tracked' | css class of the waypoint tracke
 
 ## Browser Support
 
-jQuery 1.8+
 
 
 ## Dependencies
@@ -62,7 +61,7 @@ jQuery 1.8+
 
 ## Contact me
 
-- Site: <ikloster03.github.io>
+- Site: [ikloster03.github.io](https://ikloster03.github.io)
 - E-mail: <ikloster@yandex.ru>
 
 
