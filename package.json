@@ -1,6 +1,6 @@
 {
   "name": "jquery-simple-menu",
-  "version": "0.2.7",
+  "version": "0.3.0",
   "description": "Quickly building a menu of the site",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,8 +20,24 @@
     "name": "Ivan Monastyrev",
     "email": "ikloster@yandex.ru"
   },
+  "bugs": {
+    "url": "https://github.com/ikloster03/jquery-simple-menu/issues"
+  },
   "license": "MIT",
   "dependencies": {
     "waypoints": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^0.6.2",
+    "gulp": "^3.6.2",
+    "gulp-eslint": "^0.1.7",
+    "gulp-concat": "^2.2.0",
+    "gulp-footer": "^1.0.5",
+    "gulp-header": "^1.0.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-tap": "^0.1.1",
+    "gulp-uglify": "^0.3.1",
+    "merge-stream": "^0.1.1",
+    "testem": "0.6.24"
   }
 }
