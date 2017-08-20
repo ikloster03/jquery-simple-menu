@@ -57,8 +57,9 @@ waypointTrackedClassName | string | 'tracked' | css class of the waypoint tracke
 
 ## TODO
 
-- [ ] with gulp
-- [ ] with bower
+- [x] with gulp
+- [x] with eslint
+- [ ] with webpack
 - [ ] add Browser Support
 - [ ] add Framework Support
 - [ ] no waypoints version
@@ -69,6 +70,7 @@ waypointTrackedClassName | string | 'tracked' | css class of the waypoint tracke
 
 - Site: [ikloster03.github.io](https://ikloster03.github.io)
 - E-mail: <ikloster@yandex.ru>
+- Telegram channel: [t.me/ikloster03](t.me/ikloster03)
 
 
 ## License
