@@ -1,6 +1,6 @@
 {
   "name": "jquery-simple-menu",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Quickly building a menu of the site",
   "main": "lib/jquery.simple-menu.js",
   "scripts": {
@@ -21,7 +21,11 @@
     "plugin",
     "gulp",
     "eslint",
-    "scroll"
+    "scroll",
+    "scrollspy",
+    "responsive",
+    "navigation-menu",
+    "waypoints"
   ],
   "author": {
     "name": "Ivan Monastyrev",

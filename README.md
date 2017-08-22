@@ -9,6 +9,7 @@ $('.simple-menu').simpleMenu({
 })
 ```
 
+[jqueryscript.net's guide](http://www.jqueryscript.net/menu/Responsive-Sticky-Navigation-Plugin-jQuery-Simple-Menu.html)
 
 ## Install
 
@@ -44,6 +45,11 @@ waypointTrackedClassName | string | 'tracked' | css class of the waypoint tracke
 
 ## Browser Support
 
+- Chrome
+- Firefox
+- Opera
+- Safari
+- IE
 
 ## Framework Support
 
