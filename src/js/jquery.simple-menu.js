@@ -323,9 +323,10 @@
         },
         offset: -menuLi.outerHeight( true )
       });
-    } /*else {
+    } else {
       //todo without waypoints
-    }*/
+
+    }
 
     _window.resize( function( ) {
       refreshLine( );
