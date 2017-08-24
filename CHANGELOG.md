@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0
+
+- Fix mobile bug
+
+
 ## 0.3.0
 
 - Add gulp
