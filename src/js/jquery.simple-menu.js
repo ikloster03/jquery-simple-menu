@@ -170,7 +170,8 @@
         _window = $( window ),
         menuClone = $( '<div/>' ).insertAfter( el ),
         menuHeight = 0, // height of menu
-        menuPosition, // position of  menu
+        menuPosition = 0, // height of menu
+        menuClonePosition = 0, // position of  clone menu
         windowPosition; // position of window
 
     function addStickyStyles( ) {
@@ -199,22 +200,33 @@
 
     function refresh( ) {
 
-      menuPosition = el.offset().top;
       menuHeight = el.outerHeight( true );
+      menuPosition = menuClone.offset().top;
+
+    }
+
+    function refreshClone() {
+
+      menuClonePosition = menuClonePosition === 0 ? menuPosition : menuClone.offset().top;
 
     }
 
     refresh( );
 
-    _window.resize( refresh );
-
     menuClone.css( 'height', menuHeight ).hide( );
+
+    refreshClone( );
+
+    _window.resize( function () {
+        refresh();
+        refreshClone( );
+    } );
 
     _window.scroll( function( ) {
 
       windowPosition = _window.scrollTop( );
 
-      if ( windowPosition >= menuPosition ) {
+      if ( windowPosition >= menuClonePosition ) {
         addStickyStyles( );
         menuClone.show( );
       } else {
