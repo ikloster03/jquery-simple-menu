@@ -172,7 +172,7 @@
         menuHeight = 0, // height of menu
         menuPosition = 0, // height of menu
         menuClonePosition = 0, // position of  clone menu
-        windowPosition; // position of window
+        windowPosition = 0; // position of window
 
     function addStickyStyles( ) {
 
