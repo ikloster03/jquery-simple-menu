@@ -9,8 +9,7 @@ $('.simple-menu').simpleMenu({
 })
 ```
 
-
-
+[jqueryscript.net's guide](http://www.jqueryscript.net/menu/Responsive-Sticky-Navigation-Plugin-jQuery-Simple-Menu.html)
 
 ## Install
 
@@ -46,8 +45,16 @@ waypointTrackedClassName | string | 'tracked' | css class of the waypoint tracke
 
 ## Browser Support
 
+- Chrome
+- Firefox
+- Opera
+- Safari
+- IE
 
 ## Framework Support
+
+- JQuery 1.8+
+- Waypoints 4.0+
 
 
 ## Dependencies
@@ -59,9 +66,9 @@ waypointTrackedClassName | string | 'tracked' | css class of the waypoint tracke
 
 - [x] with gulp
 - [x] with eslint
-- [ ] with webpack
+- [x] add Framework Support
 - [ ] add Browser Support
-- [ ] add Framework Support
+- [ ] with webpack
 - [ ] no waypoints version
 - [ ] no framework version
 
@@ -70,7 +77,7 @@ waypointTrackedClassName | string | 'tracked' | css class of the waypoint tracke
 
 - Site: [ikloster03.github.io](https://ikloster03.github.io)
 - E-mail: <ikloster@yandex.ru>
-- Telegram channel: [t.me/ikloster03](t.me/ikloster03)
+- Telegram channel: [t.me/ikloster03](https://t.me/ikloster03)
 
 
 ## License

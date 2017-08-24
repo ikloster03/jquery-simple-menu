@@ -1,7 +1,8 @@
 {
   "name": "jquery-simple-menu",
-  "version": "0.3.1",
+  "version": "0.3.3",
   "description": "Quickly building a menu of the site",
+  "main": "lib/jquery.simple-menu.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,11 +13,19 @@
   "homepage": "https://github.com/ikloster03/jquery-simple-menu#readme",
   "keywords": [
     "menu",
+    "simple-menu",
+    "simple-menujs",
     "js",
+    "javacript",
     "jquery",
     "plugin",
     "gulp",
-    "eslint"
+    "eslint",
+    "scroll",
+    "scrollspy",
+    "responsive",
+    "navigation-menu",
+    "waypoints"
   ],
   "author": {
     "name": "Ivan Monastyrev",
@@ -27,8 +36,10 @@
   },
   "license": "MIT",
   "dependencies": {
+    "jquery": "^1.8.2",
     "waypoints": "^4.0.1"
   },
+  "namespace": "$.fn.simpleMenu",
   "devDependencies": {
     "eslint": "^0.6.2",
     "gulp": "^3.6.2",
