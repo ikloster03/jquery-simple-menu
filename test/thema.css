@@ -20,6 +20,11 @@ body {
 
 .btn-menu {}
 
+.btn-menu:hover {
+  color: #fff;
+
+}
+
 .simple-menu li {}
 
 .simple-menu ul a {
