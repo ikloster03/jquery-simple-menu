@@ -18,7 +18,7 @@
      "radix": 1,
      "semi": [0, "never"],
      "space-after-keywords": [1, "always"],
-     "space-in-brackets": [1, "never"],
+     "space-in-brackets": [1, "always"],
      "space-unary-word-ops": 1,
      "wrap-iife": [
        "inside", {
