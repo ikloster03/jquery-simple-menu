@@ -15,13 +15,13 @@
     slidingLineHeight:            '3px',
     slidingLineSpeedAnimate:      200,
     winMobWidth:                  500,
-    waypointTrackedClassName:     'tracked'
+    trackedClassName:             'tracked'
   };
 
 
   function SimpleMenu( element, options, Waypoint ) {
 
-    this.config = $.extend( {}, defaults, options );
+    this.config = $.extend( { }, defaults, options );
     this.element = element;
     this.Waypoint = Waypoint;
 
@@ -42,6 +42,28 @@
 
   };
 
+  SimpleMenu.prototype.tools = {
+
+    getMaxOfArray: function( arr ) {
+
+        return Math.max.apply(null, arr);
+
+    },
+
+    getKeyByValue: function( obj, value ) {
+
+        for ( var prop in obj ) {
+            if ( obj.hasOwnProperty( prop ) ) {
+                if ( obj[ prop ] === value ) {
+                    return prop;
+                }
+            }
+        }
+
+    }
+
+  };
+
 
   SimpleMenu.prototype.getClasses = function( ) {
 
@@ -54,7 +76,7 @@
     this.btnClassMenu = getClass( conf.btnClassMenu );
     this.slidingLineClassName = getClass( conf.slidingLineClassName );
     this.slidingLineClassNameActive = getClass( conf.slidingLineClassNameActive );
-    this.waypointTrackedClassName = getClass( conf.waypointTrackedClassName );
+    this.trackedClassName = getClass( conf.trackedClassName );
 
   };
 
@@ -226,6 +248,54 @@
 
   };
 
+  SimpleMenu.prototype.scrollSpy = function( heightMenu ) {
+    var self = this,
+        _window = $( window );
+
+
+    function getCurrentSection( obj, num ) {
+        var arr = [ ];
+        for ( var key in obj ) {
+          if ( obj.hasOwnProperty( key ) ) {
+            var item = obj[ key ];
+            if ( item <= num ) {
+              arr.push( item );
+            }
+          }
+        }
+
+        if ( arr.length === 0 ) {
+            return null;
+        } else  if ( arr.length === 1 ) {
+            return  self.tools.getKeyByValue( obj, arr[ 0 ] );
+        }
+
+        return self.tools.getKeyByValue( obj, self.tools.getMaxOfArray( arr ) );
+    }
+
+      var jSections = $( self.trackedClassName );
+      var sections = { };
+      jSections.each( function( index, element ) {
+          sections[ element.id ] = element.offsetTop;
+      });
+
+      var curId, lastId;
+
+      _window.scroll( function ( ) {
+
+        var scrollPosition = _window.scrollTop( );
+
+        curId = getCurrentSection( sections, scrollPosition + heightMenu );
+        if ( curId ) {
+            if ( lastId !== curId ) {
+                lastId = curId;
+                self.changeMenuItem( curId );
+            }
+        }
+
+      });
+  }
+
 
   SimpleMenu.prototype.slidingLine = function( ) {
 
@@ -293,11 +363,9 @@
 
     }
 
-    function test( hash ) {
+      self.changeMenuItem = function ( hash ) {
       menuLi.removeClass( 'active' );
-
-      $.each( menuLi, function( ) {
-
+      menuLi.each(function( ) {
         if ( $( this ).children( 'a' ).attr( 'href' ).slice( 1 ) === hash ) {
           $( this ).addClass( 'active' );
           moveLine( );
@@ -308,28 +376,29 @@
 
     refreshLine( );
 
-    if ( !$.isEmptyObject( this.Waypoint ) ) {
-      var waypointTracked = $( this.waypointTrackedClassName );
+    if ( !$.isEmptyObject( self.Waypoint ) ) {
+      var waypointTracked = $( self.trackedClassName );
 
       waypointTracked.waypoint({
         handler: function( ) {
-          test( this.element.id );
+            self.changeMenuItem( this.element.id );
         },
         offset: '30%'
       });
       waypointTracked.waypoint({
         handler: function( ) {
-          test( this.element.id );
+            self.changeMenuItem( this.element.id );
         },
         offset: -menuLi.outerHeight( true )
       });
     } else {
-      //todo without waypoints
-
+        self.scrollSpy( menuLi.outerHeight( true ) );
     }
 
     _window.resize( function( ) {
+
       refreshLine( );
+
     });
 
   };
@@ -338,8 +407,8 @@
   $.fn.simpleMenu = function( options ) {
 
     var first = this.first( );
-    options = options || {};
-    var Waypoint = window.Waypoint || {};
+    options = options || { };
+    var Waypoint = window.Waypoint || { };
     new SimpleMenu( first, options, Waypoint );
     return first;
 
