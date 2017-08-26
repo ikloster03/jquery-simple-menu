@@ -41,7 +41,7 @@ slidingLineColor | string | '#ffffff' | color of the sliding line
 slidingLineHeight | string | '3px' | height of the sliding line
 slidingLineSpeedAnimate | int | 200 | speed animation of the sliding line
 winMobWidth | int | 500 | width of the Mobile window
-waypointTrackedClassName | string | 'tracked' | css class of the waypoint tracked
+trackedClassName | string | 'tracked' | css class of the waypoint tracked
 
 ## Browser Support
 
@@ -69,7 +69,7 @@ waypointTrackedClassName | string | 'tracked' | css class of the waypoint tracke
 - [x] add Framework Support
 - [ ] add Browser Support
 - [ ] with webpack
-- [ ] no waypoints version
+- [x] no waypoints version
 - [ ] no framework version
 
 
