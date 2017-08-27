@@ -1,16 +1,17 @@
-var gulp = require('gulp');
-var eslint = require('gulp-eslint');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-var header = require('gulp-header');
-var footer = require('gulp-footer');
-var tap = require('gulp-tap');
-var merge = require('merge-stream');
-var pkg = require('./package.json');
-var path = require('path');
+const gulp = require('gulp');
+const eslint = require('gulp-eslint');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const header = require('gulp-header');
+const footer = require('gulp-footer');
+const tap = require('gulp-tap');
+const merge = require('merge-stream');
+const pkg = require('./package.json');
+const path = require('path');
+const babel = require('gulp-babel');
 
-var jsFiles = ['src/js/**/*.js'];
+let jsFiles = ['src/js/**/*.js'];
 
 function fileHeader(title) {
     return [
@@ -28,7 +29,7 @@ gulp.task('lint', function() {
 });
 
 gulp.task('build', function() {
-    return gulp.src(jsFiles)
+    return gulp.src('src/js/jquery.simple-menu.js')
         .pipe(concat('jquery.simple-menu.js', { newLine: ';' }))
         .pipe(header(';'))
         .pipe(header(fileHeader('JQuery Simple Menu Plugin')))
@@ -40,8 +41,26 @@ gulp.task('build', function() {
         .pipe(gulp.dest('lib/'));
 });
 
-gulp.task('watch', function() {
-    gulp.watch(jsFiles, ['lint', 'build']);
+gulp.task('build-noframework', function() {
+    return gulp.src('src/js/noframework.simple-menu.js')
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(concat('noframework.simple-menu.js', { newLine: ';' }))
+        .pipe(header(';'))
+        .pipe(header(fileHeader('JQuery Simple Menu Plugin')))
+        .pipe(gulp.dest('lib/'))
+        .pipe(rename('noframework.simple-menu.min.js'))
+        .pipe(uglify({
+            preserveComments: 'some'
+        }))
+        .pipe(gulp.dest('lib/'));
 });
 
-gulp.task('default', ['lint', 'build', 'watch']);
+gulp.task('watch', function() {
+    gulp.watch(jsFiles, ['lint', 'build', 'build-noframework']);
+});
+
+gulp.task('default', ['lint', 'build', 'build-noframework', 'watch']);
+gulp.task('jquery', ['lint', 'build', 'watch']);
+gulp.task('noframework', ['lint', 'build-noframework', 'watch']);
