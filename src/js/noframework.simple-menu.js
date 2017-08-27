@@ -25,11 +25,11 @@
 
         }
 
-        static getKeyByValue( obj, value ) {
+        static getKeyByValue( obj, val ) {
 
             for ( let prop in obj ) {
                 if ( obj.hasOwnProperty( prop ) ) {
-                    if ( obj[ prop ] === value ) {
+                    if ( obj[ prop ] === val ) {
                         return prop;
                     }
                 }
@@ -44,9 +44,18 @@
             options = options || { };
             this._config = Object.assign({ }, defaults, options);
 
+            this._prepareClasses( );
+            this._initSimpleMenu( );
+            this._prepareSimpleMenuStyles( );
+
+            let conf = this._config;
+            conf.stickyMenu && this._initStickyMenu( );
+            conf.slidingLine && this._initSlidingLine( );
+
         }
 
         _prepareClasses( ) {
+            let self = this;
 
         }
 
@@ -58,30 +67,15 @@
 
         }
 
-
-
-        start( ) {
-
-            let conf = this._config;
-
-            this._prepareClasses();
-            this.initSimpleMenu();
-            this._prepareSimpleMenuStyles();
-
-            conf.stickyMenu && this.initStickyMenu( );
-            conf.slidingLine && this.initSlidingLine( );
+        _initSimpleMenu( ) {
 
         }
 
-        initSimpleMenu( ) {
+        _initStickyMenu( ) {
 
         }
 
-        initStickyMenu( ) {
-
-        }
-
-        initSlidingLine( ) {
+        _initSlidingLine( ) {
 
         }
     }
