@@ -5,11 +5,7 @@
      "eqeqeq": [1, "smart"],
      "func-style": [1, "declaration"],
      "no-else-return": 1,
-     "no-extra-parens":[
-       "all", {
-         "conditionalAssign": false
-       }
-     ],
+     "no-extra-parens": 1,
      "no-extra-semi": 0,
      "no-floating-decimal": 1,
      "no-nested-ternary": 1,
@@ -17,21 +13,26 @@
      "quotes": [1, "single", "avoid-escape"],
      "radix": 1,
      "semi": [0, "never"],
-     "space-after-keywords": [1, "always"],
-     "space-in-brackets": [1, "always"],
-     "space-unary-word-ops": 1,
-     "wrap-iife": [
-       "inside", {
-         "functionPrototypeMethods": true
+     "keyword-spacing": [
+       "error", {
+         "before": true
        }
      ],
+     "object-curly-spacing": [1, "always"],
+     "space-unary-ops": 1,
+     "wrap-iife": ["error", "inside"],
      "no-new": 0,
      "no-underscore-dangle": 0,
      "no-unused-expressions": [
        "error", {
-         "allowShortCircuit": true
+         "allowShortCircuit": true,
+         "allowTernary": true
        }
      ]
+   },
+
+   "parserOptions": {
+     "ecmaVersion": 6
    },
 
   "globals": {
@@ -41,6 +42,7 @@
 
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "es6": true
   }
 }
