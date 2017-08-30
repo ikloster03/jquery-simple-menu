@@ -12,11 +12,11 @@ const PATHS = {
 const common = {
     entry: {
         'jquery': PATHS.source + '/js/jquery.simple-menu.js',
-        'noframework': PATHS.source + 'js/noframework.simple-menu.js',
+        'noframework': PATHS.source + '/js/noframework.simple-menu.js',
     },
     output: {
         path: PATHS.build,
-        filename: 'js/[name].js'
+        filename: '[name].simple-menu.js'
     },
     plugins: [
 
