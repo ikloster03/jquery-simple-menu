@@ -97,7 +97,7 @@ trackedClassName | string | 'tracked' | css class of the waypoint tracked
 - [x] with eslint
 - [x] add Framework Support
 - [ ] add Browser Support
-- [ ] with webpack
+- [x] with webpack
 - [x] no waypoints version
 - [ ] no framework version
 

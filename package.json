@@ -1,6 +1,6 @@
 {
   "name": "jquery-simple-menu",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Quickly building a menu of the site",
   "main": "lib/jquery.simple-menu.js",
   "scripts": {
