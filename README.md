@@ -13,10 +13,39 @@ $('.simple-menu').simpleMenu({
 
 ## Install
 
+### NPM
+
 ```
 npm install jquery-simple-menu
 ```
 
+### YARN
+
+```
+yarn add jquery-simple-menu
+```
+
+## Webpack
+
+Command | Options
+---- | ------
+start | webpack-dev-server --env development
+build | webpack --env production
+serv | static build
+
+### Webpack's examples
+
+```
+npm run start
+npm run build
+npm run serv
+```
+
+```
+yarn run start
+yarn run build
+yarn run serv
+```
 
 ## Examples
 ![Alt Text](https://github.com/ikloster03/jquery-simple-menu/raw/master/images/example.gif)
