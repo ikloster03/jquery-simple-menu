@@ -108,7 +108,9 @@ trackedClassName | string | 'tracked' | css class of the waypoint tracked
 - E-mail: <ikloster@yandex.ru>
 - Telegram channel: [t.me/ikloster03](https://t.me/ikloster03)
 
+## [CHANGELOG](https://github.com/ikloster03/jquery-simple-menu/blob/master/CHANGELOG.md)
 
-## License
+
+## [LICENSE](https://github.com/ikloster03/jquery-simple-menu/blob/master/LICENSE)
 
 Copyright (c) 2017 Monastyrev Ivan <ikloster@yandex.ru>. Licensed under the [MIT license](https://github.com/ikloster03/jquery-simple-menu/blob/master/LICENSE).
