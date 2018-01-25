@@ -106,7 +106,7 @@ trackedClassName | string | 'tracked' | css class of the waypoint tracked
 
 - Site: [ikloster03.github.io](https://ikloster03.github.io)
 - E-mail: <ikloster@yandex.ru>
-- Telegram channel: [t.me/ikloster03](https://t.me/ikloster03)
+- Telegram channel: [t.me/ikloster03](https://t.me/ikloster95)
 
 ## [CHANGELOG](https://github.com/ikloster03/jquery-simple-menu/blob/master/CHANGELOG.md)
 
