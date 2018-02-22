@@ -17,7 +17,7 @@ function fileHeader(title) {
     return [
         '/*!',
         title + ' - ' + pkg.version,
-        'Copyright © 2017 Monastyrev Ivan',
+        'Copyright © 2018 Monastyrev Ivan',
         'Licensed under the MIT license.',
         'https://github.com/ikloster03/jquery-simple-menu/blob/master/LICENSE',
         '*/\n'
