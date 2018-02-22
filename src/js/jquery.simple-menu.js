@@ -376,10 +376,10 @@
     }
 
       self.changeMenuItem = function ( hash ) {
-      menuLi.removeClass( 'active' );
+      menuLi.removeClass( active );
       menuLi.each(function( ) {
         if ( $( this ).children( 'a' ).attr( 'href' ).slice( 1 ) === hash ) {
-          $( this ).addClass( 'active' );
+          $( this ).addClass( active );
           moveLine( );
         }
 
