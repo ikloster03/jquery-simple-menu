@@ -1,5 +1,7 @@
 # JQuery Simple Menu Plugin
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ikloster03/jquery-simple-menu.svg)](https://greenkeeper.io/)
+
 Simple Menu Plugin is a utility for quickly building a menu of the site
 
 ```js
